@@ -3,6 +3,7 @@
 let a = "pasta";
 
 console.log(a);             //pasta 
+
 // 2. Create a variable and store your mobile number.
 
 let b = "8919304733";
@@ -14,7 +15,6 @@ console.log(b);             //8919304733
 let c = false;
 
 console.log(c);              //false
-
 
 // 4. Create one undefined variable and print typeof.
 
@@ -38,8 +38,7 @@ console.log(animals[animals.length-1]);  //zebra
 
 // 8. Create object with bike details (name, model, color).
 
-
-let obj = { name: ["pulsar", "ns150"], color: ["pink", "meroon", "red"] };
+let obj = { name: ["pulsar", "ns150"], color: ["pink", "maroon", "red"] };
 
 // 9. Print bike color from object.
 
@@ -108,7 +107,7 @@ let c1 = 20;
 --c1 ;
 
 console.log(c1);   //19
- 
+
 // 17. Create variable with 50 and use post decrement.
 
 let d1 = 50 ;
@@ -129,10 +128,9 @@ console.log(100>50);    //true
 
 if (25 < 10) {
     console.log("25 is less than 10");
-
 }
-console.log(25<10);      //false
 
+console.log(25<10);      //false
 
 // 20. Check 50 >= 50.
 
@@ -161,28 +159,22 @@ console.log(25 !== "25");    //true
 // 26. Use AND operator:
 //     10 > 5 && 20 > 15
 
-console.log(10>5 && 20>15);    //true && true  = true.
-
+console.log(10>5 && 20>15);    //true && true  = true
 
 // 27. Use AND operator:
 //     5 > 10 && 20 > 15
 
 console.log(5 > 10 && 20 > 15);  //false && true = false
 
-// any one false is written as false.
-
-
 // 28. Use OR operator:
 //     5 > 10 || 20 > 15
 
-console.log(5 > 10 || 20 > 15);  // false || true = true.
-
-// all false than only false.
+console.log(5 > 10 || 20 > 15);  //false || true = true
 
 // 29. Use OR operator:
 //     2 > 5 || 1 > 10
 
-console.log(2 > 5 || 1 > 10); //false || false = false.
+console.log(2 > 5 || 1 > 10); //false || false = false
 
 // 30. Use NOT operator:
 //     !(10 > 5)
@@ -192,67 +184,56 @@ console.log( !(10 > 5));     //!(true) = false
 // 31. Use NOT operator:
 //     !(5 > 10)
 
-console.log(  !(5 > 10));    //!(false)  = true
+console.log(  !(5 > 10));    //!(false) = true
 
-
+// 32. Create ternary operator:
+//     if 50 > 25 print "True"
+//     else print "False"
+ 
 let result = (50 > 25) ? "True" : "False";
-console.log(result);  //Te{
-    console.log(false);
-}
-
-//true
+console.log(result);  //True
 
 // 33. Create ternary operator:
 //     if 18 >= 21 print "Adult"
 //     else print "Minor"
 
-if(18 >= 21) {
-    console.log("adult");
 let ageStatus = (18 >= 21) ? "Adult" : "Minor";
-console.log(ageStatus);  //Minor/ 34. Create one array with 5 city names and print third city.
+console.log(ageStatus);  //Minor
 
-let d = [ "hyderabad " , "mumbai" , "delhi" , "chennai" ,"goa"
-];
+// 34. Create one array with 5 city names and print third city.
 
-console.log(d[2]);
+let cities = [ "hyderabad" , "mumbai" , "delhi" , "chennai" ,"goa"];
+
+console.log(cities[2]);  //delhi
 
 // 35. Create one object with employee details and print employee name.
-cities = [ "hyderabad" , "mumbai" , "delhi" , "chennai" ,"goa"
-];
 
-console.log(cities[2]);  //delhi",
+let employee = {
+    empid : 101,
+    empname : "arun",
     department : "IT",
     salary : 5000
-
 }
 
-console.log(employee.empname);
-
+console.log(employee.empname);  //arun
 
 // 36. Create variable with string "100" and print typeof.
 
 let f = "100";
 
-console.log(typeof(f));
-
-//string
+console.log(typeof(f));  //string
 
 // 37. Create variable with number 100 and print typeof.
 
 let g = 100;
 
-console.log(typeof(g));
-
-//number
+console.log(typeof(g));  //number
 
 // 38. Create one null variable and print it.
 
 let h = null;
 
-console.log(h);
-
-// it will give the null value.
-
+console.log(h);  //null
 
 // 39. Create one array with mixed datatypes.
 
@@ -261,14 +242,16 @@ let mixedarray =  [
 ];
 
 console.log(mixedarray);
+//[10, "hello", true, null, {name: "arun"}, [1, 2, 3]]
 
 // 40. Create object with student details:
 //     name, mark, passed(boolean)
 
-let student= {
+let student = {
     name : "sravan",
     mark : 20, 
-    passes : true,
+    passes : true
 }
 
 console.log(student);
+//{name: "sravan", mark: 20, passes: true}
