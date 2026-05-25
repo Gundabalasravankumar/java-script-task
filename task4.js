@@ -9,6 +9,7 @@ function checkExamEligibility(attendance, feesPaid) {
 }
 
 checkExamEligibility(80, true);
+// OUTPUT: Allowed for Exam
 
 // Task 2 — Mobile Password Strength Checker
 
@@ -22,13 +23,14 @@ if (password.length >= 8 && hasUppercase && hasNumber) {
 } else {
   console.log("Weak Password");
 }
+// OUTPUT: Strong Password
 
 // Task 3 — Find Second Largest Number
 
 let numbers = [10, 50, 80, 20, 90, 70];
 
-let largest = 0;
-let secondLargest = 0;
+let largest = -Infinity;
+let secondLargest = -Infinity;
 
 for (let num of numbers) {
   if (num > largest) {
@@ -40,6 +42,7 @@ for (let num of numbers) {
 }
 
 console.log("Second Largest:", secondLargest);
+// OUTPUT: Second Largest: 80
 
 // Task 4 — Bus Seat Booking System
 
@@ -57,6 +60,10 @@ let seats = [
 ];
 
 function bookSeat(seatNumber) {
+  if (seatNumber < 1 || seatNumber > seats.length) {
+    console.log("Invalid Seat Number");
+    return;
+  }
   if (seats[seatNumber - 1] === true) {
     console.log("Seat Already Booked");
   } else {
@@ -66,7 +73,9 @@ function bookSeat(seatNumber) {
 }
 
 bookSeat(3);
+// OUTPUT: Seat Booked Successfully
 bookSeat(3);
+// OUTPUT: Seat Already Booked
 
 // Task 5 — ATM Cash Withdraw Logic
 
@@ -79,6 +88,7 @@ function withdraw(balance, amount) {
 }
 
 console.log(withdraw(10000, 9500));
+// OUTPUT: Insufficient Balance
 
 // Task 6 — Product Search Engine
 
@@ -91,6 +101,7 @@ let found = false;
 for (let product of products) {
   if (product === search) {
     found = true;
+    break;
   }
 }
 
@@ -99,6 +110,7 @@ if (found) {
 } else {
   console.log("Product Not Found");
 }
+// OUTPUT: Product Found
 
 // Task 7 — Voting Eligibility System
 
@@ -115,6 +127,7 @@ if (age >= 18) {
 } else {
   console.log("Not Eligible");
 }
+// OUTPUT: Eligible to Vote
 
 //Task 8 — Online Food Order Bill
 
@@ -127,6 +140,7 @@ function calculateBill(foodPrice, gst, deliveryCharge, discount) {
 }
 
 calculateBill(400, 5, 50, 20);
+// OUTPUT: Total Bill : ₹450
 
 // Task 9 — Reverse Word Without reverse()
 
@@ -139,6 +153,7 @@ for (let i = word.length - 1; i >= 0; i--) {
 }
 
 console.log(reversed);
+// OUTPUT: tpircsavaj
 
 // Task 10 — Mini Instagram Like System
 
@@ -156,4 +171,8 @@ function toggleLike() {
 }
 
 toggleLike();
+// OUTPUT: Liked ❤️
+// OUTPUT: Total Likes: 1
 toggleLike();
+// OUTPUT: Like 🤍
+// OUTPUT: Total Likes: 0
