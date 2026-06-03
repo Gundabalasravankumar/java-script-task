@@ -1,0 +1,161 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f4f7fb;
+  color: #1e293b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #ffffff 0%, #eef3f9 40%, #f4f7fb 100%);
+}
+
+.page-wrapper {
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px 0 48px;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 2.5vw, 3rem);
+}
+
+.page-description {
+  margin: 12px auto 0;
+  max-width: 720px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.status-panel {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stats,
+.error,
+.final {
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid #dbe7f0;
+}
+
+.stats {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.error {
+  display: none;
+  color: #b91c1c;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.final {
+  color: #334155;
+}
+
+.products {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #ffffff 0%, #eef4fc 100%);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 18px;
+  background: #f8fafc;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.3;
+  color: #0f172a;
+}
+
+.card p {
+  margin: 0;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.tag {
+  align-self: flex-start;
+  display: inline-flex;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.tag.expensive {
+  background: rgba(248, 113, 113, 0.14);
+  color: #b91c1c;
+}
+
+.tag.budget {
+  background: rgba(34, 197, 94, 0.14);
+  color: #166534;
+}
+
+.buttons {
+  display: grid;
+  gap: 10px;
+}
+
+.buttons button {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: #1d4ed8;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.buttons button:hover {
+  transform: translateY(-1px);
+  background-color: #2563eb;
+}
+
+@media (max-width: 640px) {
+  .page-wrapper {
+    padding: 18px 0 32px;
+  }
+
+  .card img {
+    height: 180px;
+  }
+}
